@@ -8,6 +8,7 @@ public class RomanNumberConverter {
 
     static {
         romanNumbers.put("C", 100);
+        romanNumbers.put("XC", 99);
         romanNumbers.put("L", 50);
         romanNumbers.put("XL", 49);
         romanNumbers.put("X", 10);

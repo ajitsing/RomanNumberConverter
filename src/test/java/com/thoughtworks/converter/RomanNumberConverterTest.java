@@ -61,6 +61,11 @@ public class RomanNumberConverterTest {
     }
 
     @Test
+    public void shouldReturnRomanNumberFor_99() {
+        assertThat(converter.convert(99), is("XC"));
+    }
+
+    @Test
     public void shouldReturnRomanNumberFor_100() {
         assertThat(converter.convert(100), is("C"));
     }
