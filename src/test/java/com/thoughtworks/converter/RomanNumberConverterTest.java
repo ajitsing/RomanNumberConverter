@@ -26,6 +26,11 @@ public class RomanNumberConverterTest {
     }
 
     @Test
+    public void shouldReturnRomanNumberFor_4() {
+        assertThat(converter.convert(4), is("IV"));
+    }
+
+    @Test
     public void shouldReturnRomanNumberFor_5() {
         assertThat(converter.convert(5), is("V"));
     }
