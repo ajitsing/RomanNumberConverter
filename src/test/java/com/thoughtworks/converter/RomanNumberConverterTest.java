@@ -69,4 +69,12 @@ public class RomanNumberConverterTest {
     public void shouldReturnRomanNumberFor_100() {
         assertThat(converter.convert(100), is("C"));
     }
+
+    @Test
+    public void shouldReturnRomanNumberForRandomNumbers() {
+        assertThat(converter.convert(79), is("LXXIX"));
+        assertThat(converter.convert(62), is("LXII"));
+        assertThat(converter.convert(38), is("XXXVIII"));
+        assertThat(converter.convert(84), is("LXXXIV"));
+    }
 }
