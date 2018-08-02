@@ -11,4 +11,10 @@ public class RomanNumberConverterTest {
         RomanNumberConverter converter = new RomanNumberConverter();
         assertThat(converter.convert(1), is("I"));
     }
+
+    @Test
+    public void shouldReturnRomanNumberFor_3() {
+        RomanNumberConverter converter = new RomanNumberConverter();
+        assertThat(converter.convert(3), is("III"));
+    }
 }
