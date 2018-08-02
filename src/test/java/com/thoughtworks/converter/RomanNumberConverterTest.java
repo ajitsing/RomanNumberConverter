@@ -59,4 +59,9 @@ public class RomanNumberConverterTest {
     public void shouldReturnRomanNumberFor_50() {
         assertThat(converter.convert(50), is("L"));
     }
+
+    @Test
+    public void shouldReturnRomanNumberFor_100() {
+        assertThat(converter.convert(100), is("C"));
+    }
 }

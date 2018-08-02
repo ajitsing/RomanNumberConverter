@@ -7,6 +7,7 @@ public class RomanNumberConverter {
     private static Map<String, Integer> romanNumbers = new LinkedHashMap<>();
 
     static {
+        romanNumbers.put("C", 100);
         romanNumbers.put("L", 50);
         romanNumbers.put("XL", 49);
         romanNumbers.put("X", 10);
