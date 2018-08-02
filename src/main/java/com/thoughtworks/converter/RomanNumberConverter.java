@@ -1,19 +1,25 @@
 package com.thoughtworks.converter;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class RomanNumberConverter {
+    private static Map<String, Integer> romanNumbers = new LinkedHashMap<>();
+
+    static {
+        romanNumbers.put("X", 10);
+        romanNumbers.put("V", 5);
+        romanNumbers.put("I", 1);
+    }
+
     public String convert(int number) {
         StringBuilder result = new StringBuilder();
-        while (number >= 10) {
-            result.append("X");
-            number -= 10;
-        }
-        while (number >= 5) {
-            result.append("V");
-            number -= 5;
-        }
-        while (number >= 1) {
-            result.append("I");
-            number -= 1;
+
+        for (Map.Entry<String, Integer> entry : romanNumbers.entrySet()) {
+            while (number >= entry.getValue()) {
+                result.append(entry.getKey());
+                number -= entry.getValue();
+            }
         }
 
         return result.toString();
