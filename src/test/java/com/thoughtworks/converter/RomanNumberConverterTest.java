@@ -7,7 +7,8 @@ import static org.junit.Assert.assertThat;
 
 public class RomanNumberConverterTest {
     @Test
-    public void shouldAssertTrueIsTrue() {
-        assertThat(true, is(true));
+    public void shouldReturnRomanNumberFor_1() {
+        RomanNumberConverter converter = new RomanNumberConverter();
+        assertThat(converter.convert(1), is("I"));
     }
 }
